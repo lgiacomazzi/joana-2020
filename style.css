@@ -20,7 +20,7 @@ body {
 }
 
 body {
-  font-family: "Rubik";
+  font-family: "Rubik", sans-serif;
   /* font-family: "Arial"; */
   font-size: 16px;
   font-weight: normal;
@@ -81,6 +81,22 @@ h4 {
   display: flex;
   justify-content: space-between;
   padding: 40px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+footer ul li {
+  padding: 10px;
 }
 
 #header ul {
@@ -262,7 +278,8 @@ h4 {
     padding: 16px;
     margin-bottom: 16px;
   }
-  #header {
+  #header,
+  #header-menu {
     display: none;
   }
   #manifesto .quote {
@@ -280,6 +297,15 @@ h4 {
     height: fit-content;
     max-height: 60vh;
   }
+  .portfolio-scroll picture {
+    padding: 0px;
+  }
+  .portfolio-scroll > picture > img {
+    height: 40vh;
+    width: 90vw;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+  }
   .portfolio-header {
     margin-top: 2vh;
   }
@@ -292,6 +318,9 @@ h4 {
   }
   .arrow {
     display: none !important;
+  }
+  footer {
+    justify-content: center;
   }
 }
 
