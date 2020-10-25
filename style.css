@@ -133,31 +133,52 @@ h4 {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  scroll-snap-type: x mandatory;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-  scroll-behavior: smooth;
 }
 
 .portfolio-scroll::-webkit-scrollbar {
   display: none;
 }
 
-.portfolio-scroll picture {
+.portfolio-scroll > picture {
   flex: 1 0 100%;
   display: flex;
-  scroll-snap-align: start;
   justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
   padding-top: 40px;
   padding-bottom: 0px;
 }
 
-.portfolio-scroll picture img {
-  align-self: center;
-  max-width: 80%;
-  max-height: 70%;
+.portfolio-scroll > picture > img {
+  /* align-self: center;
+  max-width: 70%;
+  max-height: 70%; */
+  object-position: center;
+  object-fit: contain;
+  height: 70vh;
+  width: 70vw;
+}
+
+.portfolio-scroll .portfolio-art {
+  flex: 1 0 100%;
+  display: flex;
+  scroll-snap-align: start;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 0px;
+}
+.portfolio-scroll .portfolio-art img {
+  object-position: center;
+  object-fit: contain;
+  height: 70vh;
+  width: 70vw;
 }
 
 .portfolio-header {
@@ -177,7 +198,7 @@ h4 {
 }
 
 .arrow img {
-  max-width: 5vw;
+  max-width: 3vw;
   cursor: pointer;
   transition: 500ms;
   z-index: 1;
@@ -272,4 +293,11 @@ h4 {
   .arrow {
     display: none !important;
   }
+}
+
+#scene {
+  position: absolute;
+  right: -10%;
+  bottom: 10%;
+  width: 80%;
 }
