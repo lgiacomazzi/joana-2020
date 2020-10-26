@@ -84,7 +84,8 @@ h4 {
 
 #header {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
   padding: 40px;
 }
 
@@ -104,6 +105,10 @@ footer ul li {
   padding: 10px;
 }
 
+#header-menu {
+  margin-bottom: 30px
+}
+
 #header ul {
   display: flex;
   list-style-type: none;
@@ -119,11 +124,15 @@ footer ul li {
   background: var(--violet);
 }
 
+#main .logo-mobile {
+display: none;;
+}
+
 #manifesto {
   max-width: 800px;
   margin: auto;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: -40px;
   padding: 40px;
 }
 
@@ -133,6 +142,7 @@ footer ul li {
 
 #manifesto h1 {
   margin-bottom: 60px;
+  filter: opacity(85);
 }
 
 #gif {
@@ -301,6 +311,9 @@ footer ul li {
     font-size: 24px;
     margin-bottom: 32px;
   }
+  #main .logo-mobile {
+    display: block;
+    }
   #gif {
     padding: 0;
     flex: 0 1 100%;
