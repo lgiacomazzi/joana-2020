@@ -109,14 +109,37 @@ footer ul li {
   margin-bottom: 30px
 }
 
-#header ul {
+#header-menu ul {
   display: flex;
   list-style-type: none;
   text-transform: uppercase;
 }
 
-#header ul li {
-  padding: 10px;
+#header-menu ul li {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+#header-menu a {
+  text-decoration: none;
+  color: inherit;
+  transition: 300ms;
+}
+
+.disabled {
+  opacity: .2;
+  cursor: default;
+}
+
+
+#header-menu a:hover {
+  opacity: .6;
+  color: inherit
+}
+
+
+#header-menu a.disabled:hover {
+  opacity: .2;
 }
 
 #main {
