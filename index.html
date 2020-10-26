@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joana Brum</title>
     <link href="./style.css" rel="stylesheet" />
-    <script src="./script.js"></script>
   </head>
   <body>
     <section id="main" class="bg-green">
@@ -30,10 +29,27 @@
         </h1>
         <img src="./img/svg/joana-yellow.svg" alt="Joana Brum" />
       </div>
-      <div id="gif"><img src="./img/gif.png" alt="" /></div>
+      <div id="gif">
+        <!--<div
+          id="scene"
+          data-relative-input="true"
+          data-invert-x="false"
+          data-invert-y="false"
+        >
+          <img src="./img/camadas/08.png" data-depth="11" />
+          <img src="./img/camadas/07.png" data-depth="10" />
+          <img src="./img/camadas/06.png" data-depth="8" />
+          <img src="./img/camadas/05.png" data-depth="7" />
+          <img src="./img/camadas/04.png" data-depth="6" />
+          <img src="./img/camadas/03.png" data-depth="5" />
+          <img src="./img/camadas/02.png" data-depth="3" />
+          <img src="./img/camadas/01.png" data-depth="1" />
+        </div>-->
+        <img src="./img/gif.png" alt="" />
+      </div>
     </section>
     <!-- Job 1  -->
-    <section id="job1" class="portfolio-scroll bg-white">
+    <section id="job1" class="portfolio-scroll bg-white" data-position="0">
       <div class="portfolio-header">
         <h3>Título do Conjunto</h3>
         <h4>Data, Ano</h4>
@@ -81,7 +97,7 @@
       </div>
     </section>
     <!-- Job 2  -->
-    <section id="job2" class="portfolio-scroll bg-dark">
+    <section id="job2" class="portfolio-scroll bg-dark" data-position="0">
       <div class="portfolio-header">
         <h3>Título do Conjunto</h3>
         <h4>Data, Ano</h4>
@@ -112,9 +128,9 @@
         <img src="img/job2/05.jpg" alt="" />
       </picture>
       <picture>
-        <!-- <source srcset="img/job2/01.webp" type="image/webp" /> -->
-        <source srcset="img/job2/05.jpg" type="image/jpg" />
-        <img src="img/job2/05.jpg" alt="" />
+        <!-- <source srcset="img/job2/06.webp" type="image/webp" /> -->
+        <source srcset="img/job2/06.jpg" type="image/jpg" />
+        <img src="img/job2/06.jpg" alt="" />
       </picture>
       <div class="arrow arrow-left" onclick="leftScroll(this)">
         <img src="./img/svg/yellow-arrow-left.svg" alt="" />
@@ -124,7 +140,7 @@
       </div>
     </section>
     <!-- Job 3  -->
-    <section id="job3" class="portfolio-scroll bg-white">
+    <section id="job3" class="portfolio-scroll bg-white" data-position="0">
       <div class="portfolio-header">
         <h3>Título do Conjunto</h3>
         <h4>Data, Ano</h4>
@@ -156,6 +172,20 @@
         <img src="./img/svg/green-arrow-right.svg" alt="" />
       </div>
     </section>
-    <footer></footer>
+    <footer>
+      <img src="./img/svg/joana-green.svg" alt="" />
+      <div id="header-menu">
+        <ul>
+          <li>trabalhos</li>
+          <li>biografia</li>
+          <li>contato</li>
+          <li>instagram</li>
+          <li>shop</li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -11,14 +11,17 @@
   padding: 0;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+html {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
-
+body {
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Rubik", sans-serif;
   /* font-family: "Arial"; */
@@ -134,7 +137,7 @@ footer ul li {
   max-width: 1000px;
   max-height: 650px;
   margin: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding: 40px;
 }
 
@@ -271,7 +274,11 @@ footer ul li {
 
 @media (max-width: 767px) {
   #main {
-    padding-bottom: 32px;
+    padding-bottom: 100px;
+    height: 100vh;
+    flex: 0 1 100%;
+    display: flex;
+    flex-direction: column;
   }
   #manifesto {
     text-align: left;
@@ -292,6 +299,12 @@ footer ul li {
   }
   #gif {
     padding: 0;
+    flex: 0 1 100%;
+  }
+  #gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .portfolio-scroll {
     height: fit-content;
@@ -325,8 +338,16 @@ footer ul li {
 }
 
 #scene {
-  position: absolute;
-  right: -10%;
-  bottom: 10%;
-  width: 80%;
+  /* position: fixed;
+  top: 0;
+  right: 0; */
+  background: var(--dark);
+  z-index: 1000;
+}
+
+#scene img {
+  object-position: center;
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
 }
