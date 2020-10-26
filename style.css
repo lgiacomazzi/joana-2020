@@ -22,7 +22,6 @@ body {
   overflow: auto;
   position: relative;
   scroll-behavior: smooth;
-  touch-action: pan-y;
 }
 body {
   /* font-family: "Rubik", sans-serif; */
