@@ -25,7 +25,7 @@ body {
 }
 body {
   /* font-family: "Rubik", sans-serif; */
-  font-family: "Arial";  sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 16px;
   font-weight: normal;
   color: var(--dark);
@@ -105,7 +105,7 @@ footer ul li {
 }
 
 #header-menu {
-  margin-bottom: 30px
+  margin-bottom: 30px;
 }
 
 #header-menu ul {
@@ -126,19 +126,17 @@ footer ul li {
 }
 
 .disabled {
-  opacity: .2;
+  opacity: 0.2;
   cursor: default;
 }
 
-
 #header-menu a:hover {
-  opacity: .6;
-  color: inherit
+  opacity: 0.6;
+  color: inherit;
 }
 
-
 #header-menu a.disabled:hover {
-  opacity: .2;
+  opacity: 0.2;
 }
 
 #main {
@@ -147,7 +145,7 @@ footer ul li {
 }
 
 #main .logo-mobile {
-display: none;;
+  display: none;
 }
 
 #manifesto {
@@ -335,7 +333,7 @@ display: none;;
   }
   #main .logo-mobile {
     display: block;
-    }
+  }
   #gif {
     padding: 0;
     flex: 0 1 100%;
