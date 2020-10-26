@@ -21,6 +21,7 @@ body {
   overflow: auto;
   position: relative;
   scroll-behavior: smooth;
+  touch-action: pan-y;
 }
 body {
   font-family: "Rubik", sans-serif;
@@ -158,6 +159,7 @@ footer ul li {
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-overflow-style: none; /* IE and Edge */
+  touch-action: pan-x;
 }
 
 .portfolio-scroll::-webkit-scrollbar {
