@@ -17,19 +17,22 @@ html {
   overflow: hidden;
   position: relative;
 }
+
 body {
   height: 100%;
   overflow: auto;
   position: relative;
   scroll-behavior: smooth;
 }
+
 body {
   /* font-family: "Rubik", sans-serif; */
-  font-family: "Arial", sans-serif;
+  font-family: "Rubik Mono One", sans-serif;
+  /* font-family: "Arial", sans-serif; */
   font-size: 16px;
   font-weight: normal;
   color: var(--dark);
-  background-color: #fbfbfb;
+  background-color: var(--dark);
 }
 
 h1 {
@@ -139,6 +142,17 @@ footer ul li {
   opacity: 0.2;
 }
 
+#main1 div {
+  flex: 0 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.p60 {
+  padding: 60px;
+}
+
 #main {
   padding-bottom: 100px;
   background: var(--violet);
@@ -183,10 +197,11 @@ footer ul li {
   width: 100vw;
   display: flex;
   flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   scrollbar-width: none; /* Firefox */
+  scroll-snap-stop: always;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-overflow-style: none; /* IE and Edge */
@@ -195,6 +210,21 @@ footer ul li {
 
 .portfolio-scroll::-webkit-scrollbar {
   display: none;
+}
+
+.capa {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  cursor: pointer;
+}
+
+.capa img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .portfolio-scroll > picture {
@@ -305,6 +335,23 @@ footer ul li {
   margin-left: 3px;
   text-indent: -999px;
 }
+@media (min-width: 767px) {
+  .portfolio-scroll {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: ;
+    scrollbar-width: none; /* Firefox */
+    scroll-snap-stop: always;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none; /* IE and Edge */
+    /* touch-action: pan-x; */
+  }
+}
 
 @media (max-width: 767px) {
   #main {
@@ -387,4 +434,16 @@ footer ul li {
   object-fit: contain;
   height: 100%;
   width: 100%;
+}
+
+section {
+  margin: 2vw 3vw;
+  border-radius: 18px;
+  box-shadow: inset 11px 11px 9px rgb(255 255 255 / 23%);
+  min-height: 80vh;
+  border: 1px solid #ffffff45;
+  box-shadow: 0 1rem 1.25rem 0 hsl(0deg 0% 100% / 10%),
+    0 -0.25rem 1.5rem #ffffff inset,
+    0 0.75rem 0.5rem hsl(0deg 0% 100% / 35%) inset,
+    0 0.25rem 0.5rem 0 rgb(255 255 255) inset;
 }

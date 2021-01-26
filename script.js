@@ -15,7 +15,8 @@ function rightScroll(arrow) {
   console.log(Number(portfolio.dataset.position));
 }
 
-// initiate parallax effects
-var scene = document.getElementById("scene");
-var parallaxInstance = new Parallax(scene);
-// you can change parallax options using parallaxInstance
+function loadResorce() {
+  var resorce = document.getElementById("resorce");
+  resorce.innerHTML = '<object type="text/html" data="resorce.html" ></object>';
+  console.log(resorce);
+}
