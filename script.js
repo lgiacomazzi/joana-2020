@@ -16,7 +16,14 @@ function rightScroll(arrow) {
 }
 
 function loadResorce() {
-  var resorce = document.getElementById("resorce");
+  var resorce = document.getElementById("job1");
   resorce.innerHTML = '<object type="text/html" data="resorce.html" ></object>';
   console.log(resorce);
+}
+
+function navigateTo(section) {
+  var jobNumber = section.className.split(" ")[0];
+  var url = "./" + jobNumber + ".html";
+  window.location.href = url;
+  console.log(jobNumber);
 }
