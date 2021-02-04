@@ -43,20 +43,13 @@ h4 {
 
 section.main {
   background-color: black;
+  background-image: url(./new-gifs/main01.gif);
 }
 
 section.main .logo {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
-}
-
-.main01 {
-  background-image: url(./new-gifs/main01.gif);
-  width: 100%;
-  height: 100%;
-  background-size: contain;
-  display: flex;
 }
 
 .main02 {
@@ -139,8 +132,8 @@ section.job5 {
 
 .bottom-text {
   position: absolute;
-  bottom: 4rem;
-  right: 0rem;
+  bottom: 4vh;
+  right: 0vw;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -153,8 +146,8 @@ section.job5 {
 
 .vertical-text {
   position: absolute;
-  top: 2rem;
-  left: 2rem;
+  top: 4vh;
+  left: 4vw;
 }
 
 @media (max-width: 762px) {
@@ -166,19 +159,34 @@ section.job5 {
     font-size: 0.8rem;
   }
 
-  .center-text {
-    text-shadow: 0 1px white;
+  section {
+    height: 60vh;
+  }
+
+  section.main {
+    height: 90vh !important;
+  }
+
+  section {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: inset 0px 1px 3px white;
+    margin: 2px;
   }
 
   section.main .logo {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 1vh;
+    right: 1vw;
     width: 200px;
   }
 
   section.main .text-green {
     text-shadow: 0px 2px 0px #00544c;
+  }
+
+  .center-text {
+    text-shadow: 0 1px white;
   }
 
   .bottom-text,
