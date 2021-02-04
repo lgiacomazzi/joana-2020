@@ -13,7 +13,8 @@ body {
   overflow: auto;
   position: relative;
   scroll-behavior: smooth;
-  background: black;
+  background: url("./img/bk_dark.png"), #1a1423;
+  background-size: cover;
   font-family: "Rubik Mono One", sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -27,7 +28,23 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 200ms;
+}
+
+section[onclick] {
   cursor: pointer;
+}
+
+section[onclick]:hover,
+section[onclick]:active,
+section[onclick]:focus {
+  filter: invert(1);
+  box-shadow: inset 0px 1px 10px black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 h2 {
@@ -44,6 +61,7 @@ h4 {
 section.main {
   background-color: black;
   background-image: url(./new-gifs/main01.gif);
+  margin-top: 2vh;
 }
 
 section.main .logo {
@@ -84,13 +102,60 @@ section.job3 {
 section.job4 {
   background-image: url(./new-gifs/04.gif);
   background-size: contain;
+  background-position: center;
 }
 
 section.job5 {
-  background-image: url(./new-gifs/05.gif);
+  background: url(./new-gifs/05.gif), #949392;
   background-position: center;
   background-size: 800px;
   background-repeat: no-repeat;
+}
+
+footer {
+  padding-top: 8vh;
+  padding-bottom: 4vh;
+}
+
+footer .logo {
+  margin-bottom: 4vh;
+}
+
+footer > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer .links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+
+footer a {
+  font-size: 0.8rem;
+  color: #ebe2bc;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+
+footer a:hover {
+  filter: brightness(0.8);
+  text-decoration: underline;
+}
+
+footer .auth {
+  font-size: 0.7rem;
+  color: #3f51b5;
+  background-color: white;
+  font-family: "IBM Plex Mono", sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.2em;
+  border-radius: 0.3em;
 }
 
 .bg-black {
@@ -103,6 +168,10 @@ section.job5 {
 
 .bg-red {
   background: red;
+}
+
+.text-yellow {
+  color: #fbde48;
 }
 
 .bg-yellow {
@@ -181,10 +250,10 @@ section.job5 {
   }
 
   section {
-    border-radius: 18px;
+    /* border-radius: 18px; */
     overflow: hidden;
     box-shadow: inset 0px 1px 3px white;
-    margin: 5vh;
+    margin: 3vh;
     margin-bottom: 2vh;
   }
 
@@ -200,7 +269,7 @@ section.job5 {
   }
 
   .center-text {
-    top: 8vh;
+    top: 16vh;
     left: 4vw;
     text-shadow: 0 1px white;
   }
@@ -221,5 +290,10 @@ section.job5 {
   .bottom-text > *,
   .vertical-text > * {
     padding: 0.1rem 0.3rem;
+  }
+
+  footer .container,
+  footer .links {
+    flex-direction: column;
   }
 }
