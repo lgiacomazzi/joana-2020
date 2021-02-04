@@ -21,6 +21,13 @@ function loadResorce() {
   console.log(resorce);
 }
 
+function scrollDown() {
+  var resorce = document.getElementsByClassName("job1")[0];
+  resorceY = resorce.getBoundingClientRect().y;
+  window.scrollTo(0, resorceY - 100);
+  console.log(resorceY);
+}
+
 function navigateTo(section) {
   var jobNumber = section.className.split(" ")[0];
   var url = "./" + jobNumber + ".html";
