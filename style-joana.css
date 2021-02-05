@@ -422,4 +422,8 @@ footer .auth {
     width: 40px;
     height: 40px;
   }
+
+  .portfolio-scroll-div img {
+    width: 90vw;
+  }
 }
