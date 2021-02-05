@@ -34,7 +34,6 @@ section {
   align-items: center;
   justify-content: center;
   transition: 200ms;
-  margin-bottom: 4vh;
   /* max-width: 1000px;
   margin-right: auto;
   margin-left: auto; */
@@ -86,7 +85,6 @@ h4 {
 section.main {
   background-color: black;
   background-image: url(./new-gifs/main01.gif);
-  margin-top: 2vh;
   cursor: inherit !important;
 }
 
@@ -316,8 +314,8 @@ footer .auth {
     /* border-radius: 18px; */
     overflow: hidden;
     box-shadow: inset 0px 1px 3px white;
-    margin: 3vh;
-    margin-bottom: 2vh;
+    /* margin: 3vh; */
+    /* margin-bottom: 2vh; */
   }
 
   section.main .logo {
