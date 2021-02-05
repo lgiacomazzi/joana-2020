@@ -19,6 +19,10 @@
   </head>
   <body>
     <div class="portfolio-scroll-div" data-position="0">
+      <div class="portfolio-header">
+        <div class="back" onclick="goBack()"></div>
+        <h2>série de pinturas - 2018-2020</h2>
+      </div>
       <picture>
         <source srcset="img/job1/01.webp" type="image/webp" />
         <source srcset="img/job1/01.jpg" type="image/jpg" />
@@ -49,6 +53,8 @@
         <source srcset="img/job1/05.jpg" type="image/jpg" />
         <img src="img/job1/05.jpg" alt="" />
       </picture>
+      <div class="arrow right-arrow" onclick="rightScroll(this)"></div>
+      <div class="arrow left-arrow" onclick="leftScroll(this)"></div>
     </div>
   </body>
 </html>

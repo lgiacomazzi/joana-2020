@@ -1,4 +1,16 @@
 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5625 30C6.5625 28.4467 7.8217 27.1875 9.375 27.1875H50.625C52.1783 27.1875 53.4375 28.4467 53.4375 30C53.4375 31.5533 52.1783 32.8125 50.625 32.8125H9.375C7.8217 32.8125 6.5625 31.5533 6.5625 30Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M31.7613 11.1363C32.8596 10.0379 34.6404 10.0379 35.7387 11.1363L52.6137 28.0113C53.7121 29.1096 53.7121 30.8904 52.6137 31.9887L35.7387 48.8637C34.6404 49.9621 32.8596 49.9621 31.7613 48.8637C30.6629 47.7654 30.6629 45.9846 31.7613 44.8863L46.6475 30L31.7613 15.1137C30.6629 14.0154 30.6629 12.2346 31.7613 11.1363Z" fill="white"/>
+<rect x="7" y="27" width="6" height="6" fill="white"/>
+<rect x="13" y="27" width="6" height="6" fill="white"/>
+<rect x="19" y="27" width="6" height="6" fill="white"/>
+<rect x="25" y="27" width="6" height="6" fill="white"/>
+<rect x="31" y="27" width="6" height="6" fill="white"/>
+<rect x="43" y="27" width="6" height="6" fill="white"/>
+<rect x="37" y="27" width="6" height="6" fill="white"/>
+<rect x="49" y="27" width="6" height="6" fill="white"/>
+<rect x="43" y="21" width="6" height="6" fill="white"/>
+<rect x="43" y="33" width="6" height="6" fill="white"/>
+<rect x="37" y="39" width="6" height="6" fill="white"/>
+<rect x="31" y="45" width="6" height="6" fill="white"/>
+<rect x="37" y="15" width="6" height="6" fill="white"/>
+<rect x="31" y="9" width="6" height="6" fill="white"/>
 </svg>

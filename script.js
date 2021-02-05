@@ -1,18 +1,39 @@
-function leftScroll(arrow) {
-  var portfolio = document.getElementById(arrow.parentElement.id);
-  portfolio.scrollLeft -= portfolio.clientWidth;
-  if (portfolio.dataset.position > 0) {
-    portfolio.dataset.position = Number(portfolio.dataset.position) - 1;
-    console.log(Number(portfolio.dataset.position));
+window.addEventListener("load", (event) => {
+  checkWindowPosition();
+});
+
+function checkWindowPosition() {
+  var portfolio = document.getElementsByClassName("portfolio-scroll-div")[0];
+  var screenSize = portfolio.clientWidth;
+  var scrollStart = 0;
+  var scrollEnd = portfolio.scrollWidth - screenSize;
+  console.log("scrollStart: " + scrollStart);
+  console.log("portfolio: " + portfolio.scrollLeft);
+  console.log("scrollEnd: " + scrollEnd);
+  if (portfolio.scrollLeft == scrollStart) {
+    console.log("inicio");
+  } else if (portfolio.scrollLeft == scrollEnd) {
+    console.log("fim");
   }
 }
 
+function leftScroll(arrow) {
+  var portfolio = arrow.parentElement;
+  portfolio.scrollLeft -= portfolio.clientWidth;
+  checkWindowPosition();
+  // if (portfolio.dataset.position > 0) {
+  // portfolio.dataset.position = Number(portfolio.dataset.position) - 1;
+  // console.log(Number(portfolio.dataset.position));
+  // }
+}
+
 function rightScroll(arrow) {
-  var portfolio = document.getElementById(arrow.parentElement.id);
+  var portfolio = arrow.parentElement;
   portfolio.scrollLeft += portfolio.clientWidth;
-  console.log(portfolio.width);
-  portfolio.dataset.position = Number(portfolio.dataset.position) + 1;
-  console.log(Number(portfolio.dataset.position));
+  console.log("New portfolio: " + portfolio.scrollLeft);
+  checkWindowPosition();
+  // portfolio.dataset.position = Number(portfolio.dataset.position) + 1;
+  // console.log(Number(portfolio.dataset.position));
 }
 
 function loadResorce() {
@@ -33,4 +54,8 @@ function navigateTo(section) {
   var url = "./" + jobNumber + ".html";
   window.location.href = url;
   console.log(jobNumber);
+}
+
+function goBack(section) {
+  history.back();
 }

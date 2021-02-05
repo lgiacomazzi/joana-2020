@@ -8,21 +8,21 @@
 }
 
 html {
-  height: 100%;
   position: relative;
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 body {
-  height: 100%;
   overflow: auto;
   position: relative;
   scroll-behavior: smooth;
-  background: url("./img/bk_dark.png"), #1a1423;
+  background: url("./img/bk_light.png"), white;
   background-size: cover;
   font-family: "Rubik Mono One", sans-serif;
   font-size: 16px;
   font-weight: normal;
+  height: -webkit-fill-available;
 }
 
 section {
@@ -43,13 +43,14 @@ section:not(.main):hover,
 section:not(.main):active,
 section:not(.main):focus {
   /* border-radius: 4rem; */
-  box-shadow: 0px 1px 10px black;
+  box-shadow: 0px 1px 30px #1a1423;
   z-index: 1000;
   cursor: pointer;
 }
 
-section:not(.main)::after {
+section:not(.main) .enter {
   content: "";
+  box-sizing: border-box;
   background: url(./img/svg/arrow_right.svg), black;
   width: 60px;
   height: 60px;
@@ -63,7 +64,9 @@ section:not(.main)::after {
   z-index: 1001;
 }
 
-section:not(.main):hover::after {
+section:not(.main) .enter:hover {
+  filter: invert(1);
+  border: 1px solid white;
 }
 
 .container {
@@ -150,7 +153,7 @@ section.job5 {
   flex-wrap: nowrap;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x;
   scrollbar-width: none;
   /* scroll-snap-stop: always; */
   -webkit-overflow-scrolling: touch;
@@ -169,13 +172,66 @@ section.job5 {
 .portfolio-scroll-div img {
   object-position: center;
   object-fit: contain;
-  height: 80vh;
-  width: 80vw;
+  height: 70vh;
+  width: 70vw;
 }
 
-footer {
-  padding-top: 8vh;
-  padding-bottom: 4vh;
+.portfolio-header {
+  position: fixed;
+  top: 4vh;
+  left: 4vw;
+  right: 4vw;
+  width: 100%;
+  display: flex;
+}
+
+.portfolio-header h2 {
+  align-self: center;
+}
+
+.portfolio-header .back {
+  content: "";
+  box-sizing: border-box;
+  background: url(./img/svg/arrow_left.svg), black;
+  width: 60px;
+  height: 60px;
+  /* border-radius: 100%; */
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1001;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.portfolio-scroll-div .arrow:hover,
+.portfolio-header .back:hover {
+  filter: invert(1);
+  border: 1px solid white;
+}
+
+.portfolio-scroll-div .arrow {
+  width: 40px;
+  height: 40px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.right-arrow {
+  background: url(./img/svg/arrow_right.svg), black;
+  position: fixed;
+  bottom: 4vh;
+  right: 8vw;
+}
+
+.left-arrow {
+  background: url(./img/svg/arrow_left.svg), black;
+  position: fixed;
+  bottom: 4vh;
+  left: 8vw;
 }
 
 footer .logo {
@@ -198,7 +254,7 @@ footer .links {
 
 footer a {
   font-size: 0.8rem;
-  color: #ebe2bc;
+  color: #1a1423;
   text-decoration: none;
   margin: 0.5rem;
 }
@@ -210,8 +266,8 @@ footer a:hover {
 
 footer .auth {
   font-size: 0.7rem;
-  color: #3f51b5;
-  background-color: white;
+  color: white;
+  background-color: #1a1423;
   font-family: "IBM Plex Mono", sans-serif;
   cursor: pointer;
   font-weight: bold;
@@ -221,6 +277,10 @@ footer .auth {
 
 .bg-black {
   background: black;
+}
+
+.bg-gray {
+  background: #5a5b5b;
 }
 
 .text-red {
