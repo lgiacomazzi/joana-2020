@@ -123,7 +123,7 @@ function renderImages(job) {
       [image.url.split("/").length - 1].split(".")[1];
 
     var noExtensionUrl = imageUrl.slice(0, -imageExtension.length - 1);
-    console.log(noExtensionUrl);
+
     var picture = document.createElement("PICTURE");
     var sourceWebp = document.createElement("SOURCE");
     sourceWebp.srcset = noExtensionUrl + ".webp";

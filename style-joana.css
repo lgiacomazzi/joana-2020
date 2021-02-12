@@ -204,6 +204,7 @@ section.job5 {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  height: -webkit-fill-available;
 }
 
 .portfolio-scroll .portfolio-header {
@@ -267,7 +268,6 @@ section.job5 {
   object-fit: contain;
   height: 90%;
   width: 70%;
-  cursor: none;
 }
 
 .portfolio-scroll .portfolio-footer {
