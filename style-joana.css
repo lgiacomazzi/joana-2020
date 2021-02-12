@@ -517,6 +517,7 @@ footer .auth {
   .portfolio-scroll .portfolio-description {
     border-top: 3px solid var(--dark);
     min-height: 100px;
+    display: none;
   }
 
   .portfolio-scroll .portfolio-footer {
