@@ -115,7 +115,7 @@ function createIndicators(numberImages) {
 
 function renderImages(job) {
   const images = job.img;
-  document.getElementsByClassName("portfolio-content")[0].innerHTML = "";
+
   for (i = 0; i < images.length; i++) {
     var image = images[i];
     var imageUrl = image.url;
@@ -126,6 +126,8 @@ function renderImages(job) {
     var noExtensionUrl = imageUrl.slice(0, -imageExtension.length - 1);
 
     var picture = document.createElement("PICTURE");
+    picture.classList.add("loader");
+
     var sourceWebp = document.createElement("SOURCE");
     sourceWebp.srcset = noExtensionUrl + ".webp";
     sourceWebp.type = "image/webp";
@@ -139,6 +141,8 @@ function renderImages(job) {
     var img = document.createElement("IMG");
     img.src = imageUrl;
     img.alt = image.title;
+    img.loading = "lazy";
+
     picture.appendChild(img);
 
     document
