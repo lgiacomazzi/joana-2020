@@ -115,6 +115,7 @@ function createIndicators(numberImages) {
 
 function renderImages(job) {
   const images = job.img;
+  document.getElementsByClassName("portfolio-content")[0].innerHTML = "";
   for (i = 0; i < images.length; i++) {
     var image = images[i];
     var imageUrl = image.url;
