@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Joana Brum</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../style-joana.css" rel="stylesheet" />
+    <script src="../script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
+    ></script>
+  </head>
+  <body class="job-page">
+    <div class="portfolio-scroll" data-position="0">
+      <div class="portfolio-header">
+        <div class="portfolio-title">
+          <div class="arrow left-arrow back" onclick="goBack()"></div>
+          <h2 id="title"></h2>
+        </div>
+        <img class="" src="../img/svg/joana-dark.svg" />
+      </div>
+      <div class="portfolio-content"></div>
+      <div class="portfolio-description">
+        <h3 id="job-title"></h3>
+        <p id="job-description"></p>
+      </div>
+      <div class="portfolio-footer">
+        <div class="arrow left-arrow" onclick="leftScroll(this)"></div>
+        <ol class="carousel-indicators"></ol>
+        <div class="arrow right-arrow" onclick="rightScroll(this)"></div>
+      </div>
+    </div>
+  </body>
+</html>

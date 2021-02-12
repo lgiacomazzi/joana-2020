@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,95 +7,131 @@
     />
     <title>Joana Brum</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;display=swap"
       rel="stylesheet"
     />
-    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style-joana.css" rel="stylesheet" />
     <script src="./script.js"></script>
   </head>
   <body>
-    <section id="main1">
-      <div class="p60"><img src="./img/manifesto.png" alt="" /></div>
+    <section class="main" onclick="scrollDown()">
+      <div class="center-text">
+        <h2 class="text-green">
+          “Tinta quase sem água e sentimentos pouco diluídos. A textura se forma
+          como uma memória do desenrolar do processo, algo que evidencia toda a
+          catarse que ocorreu ali...”
+        </h2>
+      </div>
+      <div class="main02"><div class="main03"></div></div>
+      <div class="bottom-text">ver mais</div>
+      <img class="logo" src="./img/svg/joana-yellow.svg" width="300" />
     </section>
-    <!-- Job 1  -->
-    <section id="job1" class="portfolio-scroll bg-white" data-position="0">
-      <div class="capa" onclick="loadResorce()">
-        <img src="./new-gifs/01.gif" alt="" />
+    <section class="job1" data-job="1" onclick="navigateTo(this)">
+      <div class="enter"></div>
+      <div class="center-text">
+        <h2 class="text-red">
+          sobre a compreênsão do vázio respiro e silêncio, expansão do movimento
+        </h2>
+      </div>
+      <div class="bottom-text">
+        <div class="bg-black">
+          <h3 class="text-white">série de pinturas - 2018-2020</h3>
+        </div>
+        <div class="bg-black">
+          <h3 class="text-white">Serie von Gemälden</h3>
+        </div>
+      </div>
+      <div class="vertical-text bg-black text-white">
+        <h3>series of paintings</h3>
       </div>
     </section>
-    <!-- Job 2  -->
-    <section
-      id="job2"
-      class="portfolio-scroll bg-dark"
-      data-position="0"
-      onscroll="myFunction()"
-    >
-      <div class="capa"><img src="./new-gifs/02.gif" alt="" /></div>
-      <picture>
-        <source srcset="img/job2/01.webp" type="image/webp" />
-        <source srcset="img/job2/01.jpg" type="image/jpg" />
-        <img src="img/job2/01.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job2/01.webp" type="image/webp" />
-        <source srcset="img/job2/01.jpg" type="image/jpg" />
-        <img src="img/job2/01.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job2/02.webp" type="image/webp" />
-        <source srcset="img/job2/02.jpg" type="image/jpg" />
-        <img src="img/job2/02.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job2/03.webp" type="image/webp" />
-        <source srcset="img/job2/03.jpg" type="image/jpg" />
-        <img src="img/job2/03.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job2/04.webp" type="image/webp" />
-        <source srcset="img/job2/04.jpg" type="image/jpg" />
-        <img src="img/job2/04.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job2/05.webp" type="image/webp" />
-        <source srcset="img/job2/05.jpg" type="image/jpg" />
-        <img src="img/job2/05.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job2/06.webp" type="image/webp" />
-        <source srcset="img/job2/06.jpg" type="image/jpg" />
-        <img src="img/job2/06.jpg" alt="" />
-      </picture>
-      <div class="arrow arrow-left" onclick="leftScroll(this)">
-        <img src="./img/svg/yellow-arrow-left.svg" alt="" />
+    <section class="job2" data-job="2" onclick="navigateTo(this)">
+      <div class="enter"></div>
+      <div class="bottom-text">
+        <div class="bg-orange">
+          <h3 class="text-red">pinturas - 2020</h3>
+        </div>
+        <div class="">
+          <h3 class="text-red darker">Gemälde</h3>
+        </div>
       </div>
-      <div class="arrow arrow-right" onclick="rightScroll(this)">
-        <img src="./img/svg/yellow-arrow-right.svg" alt="" />
+      <div class="vertical-text bg-yellow text-red">
+        <h3>paintings</h3>
       </div>
     </section>
-    <!-- Job 3  -->
-    <section id="job3" class="portfolio-scroll bg-white" data-position="0">
-      <div class="capa"><img src="./new-gifs/03.gif" alt="" /></div>
-      <picture>
-        <source srcset="img/job3/01.webp" type="image/webp" />
-        <source srcset="img/job3/01.jpg" type="image/jpg" />
-        <img src="img/job3/01.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job3/02.webp" type="image/webp" />
-        <source srcset="img/job3/02.jpg" type="image/jpg" />
-        <img src="img/job3/02.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job3/03.webp" type="image/webp" />
-        <source srcset="img/job3/03.jpg" type="image/jpg" />
-        <img src="img/job3/03.jpg" alt="" />
-      </picture>
-      <picture>
-        <source srcset="img/job3/04.webp" type="image/webp" />
-        <source srcset="img/job3/04.jpg" type="image/jpg" />
-        <img src="img/job3/04.jpg" alt="" />
-      </picture>
+    <section class="job3" data-job="3" onclick="navigateTo(this)">
+      <div class="enter"></div>
+      <div class="bottom-text">
+        <div class="bg-black">
+          <h3 class="text-white">colagens</h3>
+        </div>
+        <div class="bg-black">
+          <h3 class="text-red darker">collagen</h3>
+        </div>
+        <div class="bg-black">
+          <h3 class="text-yellow darker">collage</h3>
+        </div>
+      </div>
     </section>
+    <section class="job4" data-job="4" onclick="navigateTo(this)">
+      <div class="enter"></div>
+      <div class="vertical-text">
+        <div class="">
+          <h3 class="text-white">o gesto e o tempo</h3>
+        </div>
+        <div class="">
+          <h3 class="text-black">die Geste und die Zeit</h3>
+        </div>
+        <div class="bg-white">
+          <h3 class="text-red">
+            the gesture <span class="text-blue">and the time</span>
+          </h3>
+        </div>
+      </div>
+      <div class="bottom-text">
+        <div class="">
+          <h3 class="text-black">o tempo do gesto</h3>
+        </div>
+        <div class="">
+          <h3 class="text-black">Zeit und Geste</h3>
+        </div>
+      </div>
+      <div class="center-text">
+        <div class="bg-white">
+          <h2 class="text-red">FOTOS</h2>
+        </div>
+      </div>
+    </section>
+    <section class="job5" data-job="5" onclick="navigateTo(this)">
+      <div class="enter"></div>
+      <div class="bottom-text">
+        <div class="">
+          <h3 class="text-white">drawings</h3>
+        </div>
+        <div class="bg-gray">
+          <h3 class="text-black">desenhos</h3>
+        </div>
+        <div class="">
+          <h3 class="text-black">Zeichnungen</h3>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="container">
+        <img class="logo" src="./img/svg/joana-green.svg" alt="" />
+        <div class="links">
+          <a href="">Portfólio</a>
+          <a href="">Shop</a>
+          <a href="">Biografia</a>
+          <a href="">Instagram</a>
+          <a href="">Contato</a>
+        </div>
+        <div class="auth"><span>created by lgiacomazzi</span></div>
+      </div>
+    </footer>
   </body>
 </html>
