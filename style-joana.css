@@ -511,4 +511,8 @@ footer .auth {
     border-top: 3px solid var(--dark);
     min-height: 100px;
   }
+
+  .portfolio-scroll .portfolio-footer {
+    padding: 10px;
+  }
 }
