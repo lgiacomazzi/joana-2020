@@ -238,7 +238,7 @@ section.job5 {
   flex-wrap: nowrap;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  scroll-snap-type: x;
+  scroll-snap-type: x mandatory;
   scrollbar-width: none;
   /* scroll-snap-stop: always; */
   -webkit-overflow-scrolling: touch;
@@ -297,6 +297,11 @@ section.job5 {
   list-style: none;
   margin: 6px;
   border-radius: 100%;
+  filter: opacity(0.5);
+}
+
+.portfolio-scroll .portfolio-footer ol li:active {
+  filter: opacity(1);
 }
 
 footer {

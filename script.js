@@ -1,37 +1,36 @@
 window.addEventListener("load", (event) => {
   renderContent();
+  scrollCheck();
 });
 
-// function scrollCheck() {
-//   const portfolio = document.getElementsByClassName("portfolio-scroll-div")[0];
-//   portfolio.onscroll = _.throttle(handle_scroll, 1000);
+function scrollCheck() {
+  const portfolio = document.getElementsByClassName("portfolio-content")[0];
+  const rightArrow = document.getElementsByClassName("right-arrow")[0];
+  const leftArrow = document.getElementsByClassName("left-arrow")[0];
 
-//   function handle_scroll(e) {
-//     var portfolio = document.getElementsByClassName("portfolio-scroll-div")[0];
-//     var rightArrow = document.getElementsByClassName("right-arrow")[0];
-//     var leftArrow = document.getElementsByClassName("left-arrow")[0];
+  // portfolio.onscroll = _.throttle(handle_scroll, 100);
+  function handle_scroll(e) {
+    if (portfolio.dataset.position == 0) {
+      leftArrow.classList.add("disabled");
+    }
 
-//     if (portfolio.dataset.position == 0) {
-//       leftArrow.classList.add("disabled");
-//     }
+    // var screenSize = portfolio.clientWidth;
+    // var scrollStart = 0;
+    // var scrollEnd = portfolio.scrollWidth - screenSize;
+    console.log(portfolio.scrollLeft);
+    // portfolio.dataset.position = Number(portfolio.scrollLeft);
 
-//     var screenSize = portfolio.clientWidth;
-//     var scrollStart = 0;
-//     var scrollEnd = portfolio.scrollWidth - screenSize;
-//     console.log(portfolio.scrollLeft);
-//     portfolio.dataset.position = Number(portfolio.scrollLeft);
-
-//     if (portfolio.dataset.position == scrollStart) {
-//       leftArrow.classList.add("disabled");
-//     }
-//     if (portfolio.scrollLeft > scrollStart) {
-//       leftArrow.classList.remove("disabled");
-//     }
-//     if (portfolio.dataset.position == scrollEnd) {
-//       rightArrow.classList.add("disabled");
-//     }
-//   }
-// }
+    // if (portfolio.dataset.position == scrollStart) {
+    //   leftArrow.classList.add("disabled");
+    // }
+    // if (portfolio.scrollLeft > scrollStart) {
+    //   leftArrow.classList.remove("disabled");
+    // }
+    // if (portfolio.dataset.position == scrollEnd) {
+    //   rightArrow.classList.add("disabled");
+    // }
+  }
+}
 
 function leftScroll(arrow) {
   var portfolio = document.getElementsByClassName("portfolio-content")[0];
@@ -46,16 +45,13 @@ function leftScroll(arrow) {
 
 function rightScroll(arrow) {
   var portfolio = document.getElementsByClassName("portfolio-content")[0];
-  console.log(portfolio.scrollLeft);
   portfolio.scrollLeft += portfolio.clientWidth;
-  console.log("New portfolio: " + portfolio.scrollLeft);
 }
 
 function scrollDown() {
   var resorce = document.getElementsByClassName("job1")[0];
   resorceY = resorce.getBoundingClientRect().y;
   window.scrollTo(0, resorceY - 100);
-  console.log(resorceY);
 }
 
 function navigateTo(section) {
