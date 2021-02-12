@@ -251,7 +251,7 @@ section.job5 {
 }
 
 .loader {
-  background-image: url(../img/svg/loader.svg);
+  background-image: url(./img/svg/loader.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
