@@ -8,20 +8,17 @@
         {
           "id": 1,
           "url": "../img/job1/01.jpg",
-          "title": "title",
-          "description": "description"
+          "title": "Transformo tinta em seiva bruta me nutro do natural,(100x170cm) Tinta acrílica sobre canvas 2019"
         },
         {
           "id": 2,
           "url": "../img/job1/02.jpg",
-          "title": "title",
-          "description": "description"
+          "title": "Contraponto Visual, (200x170cm) Tinta acrilica sobre canvas, 2020. "
         },
         {
           "id": 3,
           "url": "../img/job1/03.jpg",
-          "title": "title",
-          "description": "description"
+          "title": "Transbordar para nutrir (170x150cm) Tinta acrílica sobre canvas,2020."
         },
         {
           "id": 4,
@@ -75,36 +72,6 @@
     },
     {
       "id": 3,
-      "title": "Collagens",
-      "img": [
-        {
-          "id": 1,
-          "url": "../img/job3/01.jpg",
-          "title": "title",
-          "description": "description"
-        },
-        {
-          "id": 2,
-          "url": "../img/job3/02.jpg",
-          "title": "title",
-          "description": "description"
-        },
-        {
-          "id": 3,
-          "url": "../img/job3/03.jpg",
-          "title": "title",
-          "description": "description"
-        },
-        {
-          "id": 4,
-          "url": "../img/job3/04.jpg",
-          "title": "title",
-          "description": "description"
-        }
-      ]
-    },
-    {
-      "id": 4,
       "title": "Collagens",
       "img": [
         {

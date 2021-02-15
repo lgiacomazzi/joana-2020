@@ -130,6 +130,12 @@ function renderImages(job) {
     sourceDefault.type = "image/" + imageExtension;
     picture.appendChild(sourceDefault);
 
+    var img = document.createElement("IMG");
+    img.src = imageUrl;
+    img.alt = image.title;
+    img.loading = "lazy";
+    picture.appendChild(img);
+
     var description = document.createElement("DIV");
     description.classList.add("portfolio-description");
     var title = document.createElement("P");
@@ -137,13 +143,6 @@ function renderImages(job) {
     title.innerHTML = imageTitle;
     description.appendChild(title);
     picture.appendChild(description);
-
-    var img = document.createElement("IMG");
-    img.src = imageUrl;
-    img.alt = image.title;
-    img.loading = "lazy";
-
-    picture.appendChild(img);
 
     document
       .getElementsByClassName("portfolio-content")[0]
