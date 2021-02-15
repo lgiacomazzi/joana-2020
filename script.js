@@ -36,11 +36,6 @@ function leftScroll(arrow) {
   var portfolio = document.getElementsByClassName("portfolio-content")[0];
   console.log(portfolio);
   portfolio.scrollLeft -= portfolio.clientWidth;
-
-  // if (portfolio.dataset.position > 0) {
-  // portfolio.dataset.position = Number(portfolio.dataset.position) - 1;
-  // console.log(Number(portfolio.dataset.position));
-  // }
 }
 
 function rightScroll(arrow) {

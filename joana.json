@@ -102,6 +102,36 @@
           "description": "description"
         }
       ]
+    },
+    {
+      "id": 4,
+      "title": "Collagens",
+      "img": [
+        {
+          "id": 1,
+          "url": "../img/job3/01.jpg",
+          "title": "title",
+          "description": "description"
+        },
+        {
+          "id": 2,
+          "url": "../img/job3/02.jpg",
+          "title": "title",
+          "description": "description"
+        },
+        {
+          "id": 3,
+          "url": "../img/job3/03.jpg",
+          "title": "title",
+          "description": "description"
+        },
+        {
+          "id": 4,
+          "url": "../img/job3/04.jpg",
+          "title": "title",
+          "description": "description"
+        }
+      ]
     }
   ]
 }
