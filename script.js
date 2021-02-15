@@ -110,6 +110,7 @@ function renderImages(job) {
   for (i = 0; i < images.length; i++) {
     var image = images[i];
     var imageUrl = image.url;
+    var imageTitle = image.title;
     var imageExtension = image.url
       .split("/")
       [image.url.split("/").length - 1].split(".")[1];
@@ -128,6 +129,14 @@ function renderImages(job) {
     sourceDefault.srcset = imageUrl;
     sourceDefault.type = "image/" + imageExtension;
     picture.appendChild(sourceDefault);
+
+    var description = document.createElement("DIV");
+    description.classList.add("portfolio-description");
+    var title = document.createElement("P");
+    title.classList.add("job-description");
+    title.innerHTML = imageTitle;
+    description.appendChild(title);
+    picture.appendChild(description);
 
     var img = document.createElement("IMG");
     img.src = imageUrl;

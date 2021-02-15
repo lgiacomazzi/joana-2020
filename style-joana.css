@@ -37,6 +37,7 @@ body {
 
 body.job-page {
   overflow: hidden;
+  background-color: white;
 }
 
 section {
@@ -97,6 +98,23 @@ h3 {
 }
 
 h4 {
+}
+
+section.title {
+  height: 70vh !important;
+  background-image: url(./new-gifs/main03.gif);
+  background-blend-mode: hard-light;
+  background-color: #04211e;
+}
+
+section.title img {
+  width: 400px;
+}
+
+section.main .text-green {
+  text-shadow: 0px 2px 0px #00544c;
+  padding: 6px;
+  background: rgb(0, 0, 0, 0.4);
 }
 
 section.main {
@@ -267,6 +285,7 @@ section.job5 {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  flex-direction: column;
 }
 
 .portfolio-scroll .portfolio-content picture img {
@@ -274,6 +293,12 @@ section.job5 {
   object-fit: contain;
   height: 90%;
   width: 70%;
+}
+
+.portfolio-scroll .portfolio-content picture .job-description {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
 }
 
 .portfolio-scroll .portfolio-footer {
@@ -451,15 +476,15 @@ footer .auth {
     /* margin-bottom: 2vh; */
   }
 
+  section.title {
+    max-height: 50vh;
+  }
+
   section.main .logo {
     position: absolute;
     bottom: 1vh;
     right: 1vw;
     width: 200px;
-  }
-
-  section.main .text-green {
-    text-shadow: 0px 2px 0px #00544c;
   }
 
   .center-text {
@@ -520,8 +545,7 @@ footer .auth {
 
   .portfolio-scroll .portfolio-description {
     border-top: 3px solid var(--dark);
-    min-height: 100px;
-    display: none;
+    padding: 16px;
   }
 
   .portfolio-scroll .portfolio-footer {
