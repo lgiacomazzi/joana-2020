@@ -464,6 +464,10 @@ footer .auth {
     height: 70vh;
   }
 
+  section.title img {
+    width: 200px;
+  }
+
   section.main {
     height: 90vh !important;
   }
