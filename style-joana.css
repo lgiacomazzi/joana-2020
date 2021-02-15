@@ -550,6 +550,7 @@ footer .auth {
   .portfolio-scroll .portfolio-description {
     border-top: 3px solid var(--dark);
     padding: 16px;
+    width: 100%;
   }
 
   .portfolio-scroll .portfolio-footer {
