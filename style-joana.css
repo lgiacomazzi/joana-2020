@@ -230,6 +230,7 @@ section.job5 {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: -webkit-fill-available;
 }
 
@@ -290,7 +291,7 @@ section.job5 {
 .portfolio-scroll .portfolio-content picture {
   flex: 1 0 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   scroll-snap-align: start;
   flex-direction: column;
