@@ -23,15 +23,6 @@ html {
   height: -webkit-fill-available;
 }
 
-.transition-fade {
-  transition: 0.4s;
-  opacity: 1;
-}
-
-html.is-animating .transition-fade {
-  opacity: 0;
-}
-
 body {
   overflow: auto;
   position: relative;
@@ -58,21 +49,22 @@ section {
   align-items: center;
   justify-content: center;
   transition: 200ms;
+  margin: 6px;
   /* max-width: 1000px;
   margin-right: auto;
   margin-left: auto; */
 }
 
-section:not(.main):hover,
-section:not(.main):active,
-section:not(.main):focus {
+section.job:hover,
+section.job:active,
+section.job:focus {
   /* border-radius: 4rem; */
   box-shadow: 0px 1px 30px #1a1423;
   z-index: 1000;
   cursor: pointer;
 }
 
-section:not(.main) .enter {
+section.job .enter {
   content: "";
   box-sizing: border-box;
   background: url(./img/svg/arrow_right.svg), black;
@@ -88,14 +80,9 @@ section:not(.main) .enter {
   z-index: 1001;
 }
 
-section:not(.main) .enter:hover {
+section.job .enter:hover {
   filter: invert(1);
   border: 1px solid white;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
 }
 
 h2 {
@@ -110,26 +97,33 @@ h4 {
 }
 
 section.title {
-  height: 70vh !important;
+  height: 70vh;
   background-image: url(./new-gifs/main03.gif);
   background-blend-mode: hard-light;
   background-color: #04211e;
+  margin: 0;
 }
 
 section.title img {
   width: 400px;
 }
 
-section.main .text-green {
-  text-shadow: 0px 2px 0px #00544c;
-  padding: 6px;
-  background: rgb(0, 0, 0, 0.4);
+section.title .bottom-text {
+  background-color: #ffffff;
+  left: auto;
+  right: auto;
 }
 
 section.main {
   background-color: black;
   background-image: url(./new-gifs/main01.gif);
-  cursor: inherit !important;
+  margin: 0;
+}
+
+section.main .text-green {
+  text-shadow: 0px 2px 0px #00544c;
+  padding: 6px;
+  background: rgb(0, 0, 0, 0.4);
 }
 
 section.main .logo {
@@ -185,6 +179,11 @@ section.job5 {
   background-position: center;
   background-size: 800px;
   /* background-repeat: no-repeat; */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 .arrow {
@@ -471,6 +470,12 @@ footer .auth {
 
   section {
     height: 70vh;
+    overflow: hidden;
+    max-height: 600px;
+  }
+
+  section.title {
+    height: 50vh;
   }
 
   section.title img {
@@ -479,18 +484,6 @@ footer .auth {
 
   section.main {
     height: 90vh !important;
-  }
-
-  section {
-    /* border-radius: 18px; */
-    overflow: hidden;
-    /* box-shadow: inset 0px 1px 3px white; */
-    margin: 6px;
-    /* margin-bottom: 2vh; */
-  }
-
-  section.title {
-    max-height: 50vh;
   }
 
   section.main .logo {
@@ -564,5 +557,84 @@ footer .auth {
 
   .portfolio-scroll .portfolio-footer {
     padding: 10px;
+  }
+}
+
+.fade-in-bottom > * {
+  opacity: 1;
+  transform: translateY(0px);
+  animation-name: fadeInBottom;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+.scale-in {
+  transform: scale(1);
+  animation-name: scaleIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+.fade-in-left {
+  opacity: 1;
+  transform: translateX(0px);
+  animation-name: fadeInLeft;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+.fade-in-right {
+  opacity: 1;
+  transform: translateX(0px);
+  animation-name: fadeInRight;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

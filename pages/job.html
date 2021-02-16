@@ -6,6 +6,11 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>Joana Brum</title>
+
+    <!-- Images -->
+    <link rel="icon" type="image/png" href="../favicon.png" />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&amp;display=swap"
       rel="stylesheet"
@@ -14,25 +19,24 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Styles -->
     <link href="../style-joana.css" rel="stylesheet" />
-    <script src="../script.js"></script>
-    <link rel="icon" type="image/png" href="../favicon.png" />
-    <script
-      type="text/javascript"
-      src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"
-    ></script>
+
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="../script.js"></script>
   </head>
   <body class="job-page">
     <div class="portfolio-scroll" data-position="0">
       <div class="portfolio-header">
         <div class="portfolio-title">
-          <div class="arrow left-arrow back" onclick="goBack()"></div>
-          <h2 id="title"></h2>
+          <div class="arrow left-arrow back scale-in" onclick="goBack()"></div>
         </div>
-        <img class="" src="../img/svg/joana-dark.svg" />
+        <img class="fade-in-right" src="../img/svg/joana-dark.svg" />
       </div>
       <div class="portfolio-content" data-position="0"></div>
-      <div class="portfolio-footer">
+      <div class="portfolio-footer fade-in-bottom">
         <div class="arrow left-arrow" onclick="leftScroll(this)"></div>
         <ol class="carousel-indicators"></ol>
         <div class="arrow right-arrow" onclick="rightScroll(this)"></div>

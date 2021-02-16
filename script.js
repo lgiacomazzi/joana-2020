@@ -1,11 +1,50 @@
-import Swup from "swup";
-// var Swup = import("./node_modules/swup");
-const swup = new Swup();
-
 window.addEventListener("load", (event) => {
-  renderContent();
-  scrollCheck();
+  var filter = /page/;
+  if (filter.test(window.location.pathname)) {
+    renderContent();
+  }
+  // scrollCheck();
 });
+
+window.addEventListener(
+  "keydown",
+  function (event) {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
+
+    switch (event.key) {
+      case "Down": // IE/Edge specific value
+      case "ArrowDown":
+        break;
+      case "Up": // IE/Edge specific value
+      case "ArrowUp":
+        goBack();
+        break;
+      case "Left": // IE/Edge specific value
+      case "ArrowLeft":
+        leftScroll();
+        break;
+      case "Right": // IE/Edge specific value
+      case "ArrowRight":
+        rightScroll();
+        break;
+      case "Enter":
+        // Do something for "enter" or "return" key press.
+        break;
+      case "Esc": // IE/Edge specific value
+      case "Escape":
+        // Do something for "esc" key press.
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
+
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  },
+  true
+);
 
 function scrollCheck() {
   const portfolio = document.getElementsByClassName("portfolio-content")[0];
@@ -96,7 +135,12 @@ function renderElements(json, id) {
 function renderJobInfo(job) {
   var pageTitle = (document.getElementsByTagName("title")[0].innerHTML =
     job.title + " | Joana Brum");
-  var jobTitle = (document.getElementById("title").innerHTML = job.title);
+
+  var title = document.getElementsByClassName("portfolio-title")[0];
+  var jobTitle = document.createElement("H2");
+  jobTitle.classList.add("fade-in-left");
+  jobTitle.innerHTML = job.title;
+  title.appendChild(jobTitle);
   var numberImages = job.img.length;
   createIndicators(numberImages);
 }
