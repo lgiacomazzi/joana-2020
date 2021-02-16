@@ -250,7 +250,7 @@ section.job5 {
 }
 
 .portfolio-scroll .portfolio-content {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   flex-wrap: nowrap;

@@ -1,3 +1,7 @@
+import Swup from "swup";
+// var Swup = import("./node_modules/swup");
+const swup = new Swup();
+
 window.addEventListener("load", (event) => {
   renderContent();
   scrollCheck();
